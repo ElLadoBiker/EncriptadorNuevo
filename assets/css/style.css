@@ -1,13 +1,16 @@
+/* rem */
 html {
-  font-size: 26px;
+  font-size: 16px;
 }
 /* variables */
-:root {
+ :root {
   --colorPrincipal: #e5e5e5;
   --colorSecundario: #609ed4;
   --colorTerciario: #ffffff;
   --colorCuatro: #0a3871;
-}
+  --colorCinco: #D8DFE8;
+  --colorSeis: #495057;
+} 
 /* selector */
 * {
   box-sizing: border-box;
@@ -15,7 +18,7 @@ html {
 
 /* Body */
 body {
-  font-size: 2vw;
+  font-size: 2rem;
   background: var(--colorPrincipal);
   display: flex;
   flex-direction: column;
@@ -29,6 +32,7 @@ header {
   /* height: 48px; */
   left: 40px;
   top: 40px;
+  position: relative;
 }
 /* cuerpo página */
 main {
@@ -49,16 +53,55 @@ main {
   justify-content: center;
   align-items: center;
 }
+/* advertencia e icono */
+.contenedores p{
+  padding: 20px;
+  color:var(--colorSeis);
+}
 
+/* Grids */
 .grid-item-1 {
-  grid-column: 1 / span 3;
+  grid-column: 1 / 5;
 }
 
 .contenedores textarea {
   height: 30%;
   width: 69%;
 }
+.advertencia{
 
-.grid-item-2 {
-  grid-column: 4 / span 7;
 }
+.grid-item-2 {
+  grid-column: 5 / 7;
+}
+
+#cajaBotones{
+  width: 69%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.botones{
+  width: 80%;
+  border-radius: 24px;
+  height: 67px;
+  border:var(--colorCuatro) solid 1px;
+}
+#btn-encriptar{
+  background: var(--colorCuatro);
+  
+}
+
+#btn-desencriptar{
+  background:var(--colorCinco);
+}
+
+#btn-copiar{
+
+  background:var(--colorCinco);
+}
+
+
