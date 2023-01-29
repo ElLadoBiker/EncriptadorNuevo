@@ -11,7 +11,7 @@
     <!-- mipropioestilo -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- iconos -->
+    <!-- iconos https://fontawesome.com/ -->
     <script
       src="https://kit.fontawesome.com/756f501363.js"
       crossorigin="anonymous"
@@ -41,7 +41,6 @@
             Solo letras minúsculas y sin acentos
           </p>
         </div>
-
         <!-- contenedorDeBotones -->
         <div id="cajaBotones">
           <button id="btn-encriptar" class="botones">Encriptar</button>
@@ -51,10 +50,12 @@
       <!-- encriptador -->
       <section class="contenedores grid-item-2">
         <!-- textoEncriptado -->
-        <textarea id="textoSalida"></textarea>
+        <textarea id="textoSalida" readonly></textarea>
         <!-- textos -->
-        <h3>Ningún mensaje fue encontrado</h3>
-        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        <div class="textos">
+          <h3>Ningún mensaje fue encontrado</h3>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
         <!-- botonCopiar -->
         <button id="btn-copiar" class="botones">Copiar</button>
       </section>
@@ -62,11 +63,12 @@
     <!-- Footer -->
     <footer>
       <!-- redesSociales -->
-      <h1>copyrigth</h1>
+      <h1>Copyrigth</h1>
       <h2>Redes Sociales</h2>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
+      <a href="aqui va tu link"><i class="fa-brands fa-github"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin"></i></a>
     </footer>
+
+    <script src="./assets/js/scripts.js"></script>
   </body>
 </html>

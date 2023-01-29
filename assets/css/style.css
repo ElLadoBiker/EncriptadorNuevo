@@ -10,17 +10,18 @@ html {
   --colorCuatro: #0a3871;
   --colorCinco: #D8DFE8;
   --colorSeis: #495057;
+  --colorSiete: #F3F5FC;
+  --colorOcho:#343A40;
 } 
 /* selector */
 * {
   box-sizing: border-box;
-  background-color: red;
 }
 
 /* Body */
 body {
   font-size: 2rem;
-  background: var(--colorPrincipal);
+  background: var(--colorSiete);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -40,15 +41,16 @@ main {
   display: grid;
   /* height: 90vh; */
   width: 100vw;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 10% repeat(5, 1fr);
   grid-template-rows: repeat(1, 1fr);
   flex: 1;
   place-items: center;
+  gap: 15px;
 }
 /* secciones */
 .contenedores {
   height: 100%;
-  width: 100%;
+  width: 92%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,23 +64,68 @@ main {
 
 /* Grids */
 .grid-item-1 {
-  grid-column: 1 / 5;
+  grid-column: 2 / 5;
 }
+
+/* Contenedor TextArea */
 
 .contenedores textarea {
-  height: 30%;
-  width: 69%;
+  height: 65%;
+  width: 100%;
+  border: none;
+  background: none;
+  margin-top: 5%;
+  resize: none;
+  outline: none;
 }
-.advertencia{
 
+
+.contenedores textarea::placeholder{
+  color: var(--colorCuatro);
+  font-size: 2rem;
+}
+
+.advertencia{
+  width: 100%;
+  font-size: 0.75rem;
+  margin: 0 5px;
+  color: var(--colorSeis);
 }
 .grid-item-2 {
   grid-column: 5 / 7;
+  background-color: var(--colorTerciario);
+  border-radius: 32px;
+  width: 75%;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
+.grid-item-2 textarea{
+  background-image: url("../img/muneco.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 1.5rem;
+  padding: 0 1.7rem;
+}
+
+
+.grid-item-2 h3{
+  color: var(--colorOcho);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.grid-item-2 p{
+  color: var(--colorSeis);
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Caja botones */
+
 #cajaBotones{
-  width: 69%;
-  height: 15%;
+  width: 100%;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,10 +137,18 @@ main {
   border-radius: 24px;
   height: 67px;
   border:var(--colorCuatro) solid 1px;
+  color: var(--colorCuatro);
 }
+
+/* Encriptador texto */
+
+.textos{
+  width: 80%;
+}
+
 #btn-encriptar{
   background: var(--colorCuatro);
-  
+  color:var(--colorTerciario);
 }
 
 #btn-desencriptar{
@@ -101,8 +156,87 @@ main {
 }
 
 #btn-copiar{
-
+  display: none;
   background:var(--colorCinco);
 }
 
+footer{
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--colorCuatro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 
+footer a i{
+  color: var(--colorCuatro);
+  font-size: 2.5rem;
+}
+
+
+@media screen and (max-width:768px){
+  header{
+    left: 0;
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .grid-item-1{
+    min-height: 80%;
+  }
+
+  .grid-item-2{
+    height: auto;
+    width: 92%;
+    padding: 2rem 0;
+  }
+  .grid-item-2 textarea{
+    display: none;
+  }
+
+  footer{
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width:375px){
+  main{
+    height: auto;
+  }
+
+  .grid-item-1{
+    min-height: 50%;
+    margin: 0 auto;
+  }
+
+  .grid-item-1 textarea{
+    height: 50%;
+    color: var(--colorCuatro);
+    font-size: 1.5rem;
+  }
+
+  #cajaBotones{
+    height: 100px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .grid-item-2{
+    height: auto;
+  }
+  .grid-item-2 textarea{
+    height: auto;
+  }
+
+  footer{
+    height: 80px;
+    margin: auto 0;
+  }
+
+}
