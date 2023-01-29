@@ -21,7 +21,7 @@ html {
 /* Body */
 body {
   font-size: 2rem;
-  background: red;
+  background: var(--colorSiete);
   display: flex;
   flex-direction: column;
   height: 100%;
