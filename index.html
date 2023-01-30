@@ -1,72 +1,76 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura Encriptador</title>
 
     <!-- Reset CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
 
-    <!-- Mis Estilos -->
+    <!-- Mis estilos -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <!-- iconos -->
-    <script
-      src="https://kit.fontawesome.com/756f501363.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <title>Encriptador</title>
   </head>
   <body>
     <!-- Header -->
     <header>
-      <!-- imgMiLogo -->
-      <img src="./assets/img/Logo.png" alt="Logo Alura" />
+      <img src="./assets/img/logo.png" alt="" />
     </header>
-    <!-- Cuerpo  -->
+
+    <!-- Cuerpo -->
     <main>
-      <!-- Sección 1 -->
+      <!-- Seccion 1 -->
       <section class="contenedores grid-item-1">
-        <!-- textoDeEntrada -->
+        <!-- Texto de Entrada -->
         <textarea
+          name="textoEntrada"
           id="textoEntrada"
           placeholder="Escribe tu texto aquí"
         ></textarea>
-        <!-- advertencia -->
+
         <div class="advertencia">
           <p>
-            <span><i class="fa-sharp fa-solid fa-circle-exclamation"></i></span>
+            <img src="./assets/img/exclamation.png" />
             Solo letras minúsculas y sin acentos
           </p>
         </div>
-        
-        <!-- contenedorDeBotones -->
-        <div id="cajaBotones">
-          <button id="btn-encriptar" class="botones">Encriptar</button>
-          <button id="btn-desencriptar" class="botones">Desencriptar</button>
+
+        <!-- Contenedor de botones -->
+        <div class="cajaBotones">
+          <!-- Encriptar -->
+          <button id="btnEncriptar" class="botones">Encriptar</button>
+          <!-- Desencriptar -->
+          <button id="btnDesencriptar" class="botones">Desencriptar</button>
         </div>
       </section>
-      <!-- Sección 2 -->
+
+      <!-- Seccion 2 -->
       <section class="contenedores grid-item-2">
-        <!-- textoEncriptado -->
-        <textarea id="textoSalida"></textarea>
-        <!-- textos -->
+        <img src="./assets/img/muneco.png" width="200" alt="" class="img" />
+
+        <br />
+
         <h3>Ningún mensaje fue encontrado</h3>
+
         <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-        <!-- botonCopiar -->
-        <button id="btn-copiar" class="botones">Copiar</button>
+
+        <textarea
+          name="textoSalida"
+          id="textoSalida"
+          placeholder="Texto encriptado"
+        ></textarea>
+
+        <button id="btnCopiar" class="botones">Copiar</button>
       </section>
     </main>
+
     <!-- Footer -->
     <footer>
-      <!-- redesSociales -->
-      <h1>copyrigth</h1>
+      <h1>Copyright &copy; - Alumno Alura</h1>
       <h2>Redes Sociales</h2>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
     </footer>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

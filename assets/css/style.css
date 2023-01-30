@@ -1,48 +1,259 @@
+/* rem */
 html {
   font-size: 16px;
 }
 
+/* variables */
+:root {
+  --colorPrincipal: #e5e5e5;
+  --ColorSecundario: #609ed4;
+  --ColorTerciario: #ffffff;
+  --ColorCuaternario: #0a3871;
+  --colorCinco: #d8dfe8;
+  --colorSeis: #495057;
+  --colorSiete: #f3f5fc;
+  --colorOcho: #343a40;
+}
+
+/* selector */
+* {
+  box-sizing: border-box;
+}
+
+/* body */
 body {
-  height: 100vh;
-  width: 100%;
+  font-size: 2rem;
+  background: var(--colorPrincipal);
   display: flex;
   flex-direction: column;
-}
-
-body > header,
-main,
-footer {
-  width: 100%;
   height: 100%;
-  display: flex;
+  position: fixed;
+  width: 100%;
 }
 
+/* header logo */
 header {
-  flex: 1 0 5%;
-  padding: 15px 0 0 35px;
+  flex: 0 0 6.5%;
+  display: flex;
+  align-items: flex-end;
 }
 
 header img {
-  height: 43px;
+  height: 30px;
 }
 
+/* cuerpo página */
 main {
-  flex: 1 1 90%;
-  flex-direction: row;
+  flex: 1 1 80%;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 10% repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  place-items: center;
+  gap: 15px;
 }
 
+/* secciones */
 .contenedores {
   height: 100%;
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* advertencia e icono */
+.contenedores p {
+  padding: 20px;
+  color: var(--colorSeis);
+}
+
+/* Grid */
+.grid-item-1 {
+  grid-column: 2 / 6;
+}
+
+.grid-item-1 textarea {
+  font-size: 1.5rem;
+}
+
+/* contenedor textarea */
+.contenedores textarea {
+  height: 65%;
   width: 100%;
+  background-color: #f3f5fc;
+  border-radius: 20px;
+  padding: 20px 0px 0px 20px;
+  resize: none;
+  outline: none;
+  border: none;
+}
+
+.contenedores textarea::placeholder {
+  color: var(--ColorCuaternario);
+  font-size: 1.5rem;
+}
+
+.advertencia {
+  width: 100%;
+  font-size: 0.75rem;
+  margin: 0 5px;
+  color: var(--colorSeis);
+}
+
+/* grid-2 */
+.grid-item-2 {
+  grid-column: 6 / 8;
+  background-color: var(--ColorTerciario);
+  border-radius: 32px;
+  width: 75%;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.grid-item-2 textarea {
+  font-size: 1.5rem;
+  padding: 0 1.7rem;
+  display: none;
+}
+
+.grid-item-2 img {
+  height: 200px;
+}
+
+.grid-item-2 h3 {
+  color: var(--colorOcho);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.grid-item-2 p {
+  color: var(--colorSeis);
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* cajabotones */
+.cajaBotones {
+  width: 100%;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  grid-gap: 50px;
+}
+
+.botones {
+  width: 80%;
+  border-radius: 24px;
+  height: 67px;
+  border: var(--ColorCuaternario) solid 1px;
+}
+
+.textos {
+  width: 80%;
+}
+
+/* boton-encriptar */
+#btnencriptar {
+  background: var(--ColorCuaternario);
+  color: var(--ColorTerciario);
+}
+
+/* boton-desencriptar */
+#btndesencriptar {
+  background: var(--colorCinco);
+}
+
+/* botoncopiar */
+#btncopiar {
+  background: var(--colorCinco);
+  display: none;
 }
 
 footer {
-  flex: 1 0 5%;
-  flex-direction: column;
+  flex: 0 0 8%;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--ColorCuaternario);
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding-bottom: 8px;
+  gap: 15px;
+}
+
+footer a i {
+  color: var(--ColorCuaternario);
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    position: inherit;
+  }
+
+  header {
+    left: 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .grid-item-1 {
+    min-height: 80%;
+  }
+
+  .grid-item-2 {
+    height: auto;
+    width: 92%;
+    padding: 2rem 0;
+  }
+
+  .grid-item-2 textarea {
+    display: none;
+  }
+
+  footer {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    height: auto;
+  }
+
+  .grid-item-1 {
+    min-height: 50%;
+    margin: 0 auto;
+  }
+
+  .grid-item-1 textarea {
+    height: 50%;
+    color: var(--ColorCuaternario);
+    font-size: 1.5rem;
+  }
+
+  #cajaBotones {
+    height: 100px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .grid-item-2 {
+    height: auto;
+  }
+
+  .grid-item-2 textarea {
+    height: auto;
+  }
+
+  footer {
+    height: 80px;
+    margin: auto 0;
+  }
 }

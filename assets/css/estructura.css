@@ -1,0 +1,48 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body > header,
+main,
+footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+header {
+    flex: 1 0 5%;
+    padding: 15px 0 0 35px;
+}
+
+header img {
+    height: 43px;
+}
+
+main {
+    flex: 1 1 90%;
+    flex-direction: row;
+}
+
+.contenedores {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer {
+    flex: 1 0 5%;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 8px;
+}
