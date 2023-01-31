@@ -50,10 +50,10 @@ function encriptador(mensaje, forma) {
 
 // DOM
 const textoEntrada = document.querySelector("#textoEntrada");
-const btnEncriptar = document.querySelector("#btnencriptar");
+const btnEncriptar = document.querySelector("#btnEncriptar");
 const textoSalida = document.querySelector("#textoSalida");
-const btnCopiar = document.querySelector("#btncopiar")
-const btnDesencriptar = document.querySelector('#btndesencriptar')
+const btnCopiar = document.querySelector("#btnCopiar")
+const btnDesencriptar = document.querySelector("#btnDesencriptar")
 
 
 // Añadir btn de Encriptador para encriptar
@@ -80,3 +80,4 @@ btnDesencriptar.addEventListener("click",
         textoEntrada.value = "";
         textoSalida.value = mensaje;
     }
+);
