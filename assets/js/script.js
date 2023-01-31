@@ -17,7 +17,7 @@ const letrasEncriptadas = ["enter", "imes", "ai", "ober", "ufat"];
 //  Los parametros que reciben es un mensaje, y luego la forma. Donde "1" es encriptar y "2" es desencriptar
 //  Ejemplo: encriptador("hola", 1) retorna hoberlai.
 //  Ejemplo: encriptador("hoberlai", 2) retorna hola. 
- 
+
 function encriptador(mensaje, forma) {
     // Se utiliza el toLowerCase para convertir el texto recibido en minusculas, para su encriptacion.
     mensaje = mensaje.toLowerCase();
@@ -54,11 +54,17 @@ const btnEncriptar = document.querySelector("#btnEncriptar");
 const textoSalida = document.querySelector("#textoSalida");
 const btnCopiar = document.querySelector("#btnCopiar")
 const btnDesencriptar = document.querySelector("#btnDesencriptar")
+const seccion2 = document.querySelectorAll(".grid-item-2")
+
+const titulo = document.querySelector("#titulo");
+const parrafo = document.querySelector("#parrafo");
+const muneco = document.querySelector('#muneco')
 
 
 // Añadir btn de Encriptador para encriptar
 btnEncriptar.addEventListener("click",
     () => {
+        ocultarBranding();
         let mensaje = encriptador(textoEntrada.value, 1);
         textoEntrada.value = "";
         textoSalida.value = mensaje;
@@ -68,16 +74,35 @@ btnEncriptar.addEventListener("click",
 // Añadir boton para copiar
 btnCopiar.addEventListener("click",
     () => {
+        mostrarBranding();
         textoEntrada.value = textoSalida.value; // Copiado automatico
-
         textoSalida.value = ""; // Se limpia el valor del texto
     }
 );
 // Añadir btn de Encriptador para desencriptar
 btnDesencriptar.addEventListener("click",
     () => {
+        ocultarBranding();
         let mensaje = encriptador(textoEntrada.value, 2);
         textoEntrada.value = "";
         textoSalida.value = mensaje;
     }
 );
+
+
+// Funciones DOM
+function ocultarBranding() {
+    titulo.classList.add("hide")
+    parrafo.classList.add("hide")
+    muneco.classList.add("hide")
+    textoSalida.classList.remove("hide")
+    btnCopiar.classList.remove("hide")
+}
+
+function mostrarBranding() {
+    titulo.classList.remove("hide")
+    parrafo.classList.remove("hide")
+    muneco.classList.remove("hide")
+    textoSalida.classList.add("hide")
+    btnCopiar.classList.add("hide")
+}
