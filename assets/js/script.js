@@ -58,7 +58,7 @@ const seccion2 = document.querySelectorAll(".grid-item-2")
 
 const titulo = document.querySelector("#titulo");
 const parrafo = document.querySelector("#parrafo");
-const muneco = document.querySelector('#muneco')
+const muneco = document.querySelector("#muneco");
 
 
 // Añadir btn de Encriptador para encriptar
