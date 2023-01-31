@@ -1,77 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alura Encriptador</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alura Encriptador</title>
 
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="./assets/css/reset.css" />
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
 
-    <!-- Mis estilos -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <img src="./assets/img/logo.png" alt="" />
-    </header>
+        <!-- Mis estilos -->
+        <link rel="stylesheet" href="./assets/css/estructura.css" />
 
-    <!-- Cuerpo -->
-    <main>
-      <!-- Seccion 1 -->
-      <section class="contenedores grid-item-1">
-        <!-- Texto de Entrada -->
-        <textarea
-          name="textoEntrada"
-          id="textoEntrada"
-          placeholder="Escribe tu texto aquí"
-        ></textarea>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <img src="./assets/img/logo.png" alt="" />
+        </header>
 
-        <div class="advertencia">
-          <p>
-            <img src="./assets/img/exclamation.png" />
-            Solo letras minúsculas y sin acentos
-          </p>
-        </div>
+        <!-- Cuerpo -->
+        <main>
+            <!-- Seccion 1 -->
+            <section class="contenedores grid-item-1">
+                <!-- Texto de Entrada -->
+                <textarea
+                    name="textoEntrada"
+                    id="textoEntrada"
+                    placeholder="Escribe tu texto aquí"
+                ></textarea>
 
-        <!-- Contenedor de botones -->
-        <div class="cajaBotones">
-          <!-- Encriptar -->
-          <button id="btnEncriptar" class="botones">Encriptar</button>
-          <!-- Desencriptar -->
-          <button id="btnDesencriptar" class="botones">Desencriptar</button>
-        </div>
-      </section>
+                <div class="advertencia">
+                    <p>
+                        <img src="./assets/img/exclamation.png" />
+                        Solo letras minúsculas y sin acentos
+                    </p>
+                </div>
 
-      <!-- Seccion 2 -->
-      <section class="contenedores grid-item-2">
+                <!-- Contenedor de botones -->
+                <div class="cajaBotones">
+                    <!-- Encriptar -->
+                    <button id="btnEncriptar" class="botones">Encriptar</button>
+                    <!-- Desencriptar -->
+                    <button id="btnDesencriptar" class="botones">Desencriptar</button>
+                </div>
+            </section>
 
-        <img src="./assets/img/muneco.png" width="200" alt="" class="img" />
+            <!-- Seccion 2 -->
+            <section class="contenedores grid-item-2">
+                <img src="./assets/img/muneco.png" width="200" alt="" id="muneco" />
 
-        <br />
+                <h1 id="titulo">Ningún mensaje fue encontrado</h1>
 
-        <h3>Ningún mensaje fue encontrado</h3>
+                <p id="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
 
-        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                <textarea
+                    name="textoSalida"
+                    id="textoSalida"
+                    placeholder="Texto encriptado"
+                    class="hide"
+                ></textarea>
 
-        <textarea
-          name="textoSalida"
-          id="textoSalida"
-          placeholder="Texto encriptado"
-        ></textarea>
+                <button id="btnCopiar" class="botones hide">Copiar</button>
+            </section>
+        </main>
 
-        <button id="btnCopiar" class="botones">Copiar</button>
-      </section>
-    </main>
+        <!-- Footer -->
+        <footer>
+            <h1>Copyright &copy;</h1>
+            <h1>Alumno Alura</h1>
+            <div class="red-social">
+                <a href="https://github.com/">
+                    <img src="./assets/img/github.svg" alt="" />
+                </a>
+                <a href="https://www.linkedin.com/">
+                    <img src="./assets/img/linkedin.svg" alt="" />
+                </a>
+            </div>
+        </footer>
 
-    <!-- Footer -->
-    <footer>
-      <h1>Copyright &copy; - Alumno Alura</h1>
-      <h2>Redes Sociales</h2>
-    </footer>
-
-    <script src="./assets/js/script.js"></script>
-  </body>
+        <script src="./assets/js/script.js"></script>
+    </body>
 </html>
