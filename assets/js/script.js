@@ -64,10 +64,15 @@ const muneco = document.querySelector('#muneco')
 // Añadir btn de Encriptador para encriptar
 btnEncriptar.addEventListener("click",
     () => {
-        ocultarBranding();
-        let mensaje = encriptador(textoEntrada.value, 1);
-        textoEntrada.value = "";
-        textoSalida.value = mensaje;
+        if (textoEntrada.value !== "") {
+            ocultarBranding();
+            let mensaje = encriptador(textoEntrada.value, 1);
+            textoEntrada.value = "";
+            textoSalida.value = mensaje;
+        }
+        else {
+            alert('No puede estar vacio')
+        }
     }
 );
 
@@ -82,10 +87,15 @@ btnCopiar.addEventListener("click",
 // Añadir btn de Encriptador para desencriptar
 btnDesencriptar.addEventListener("click",
     () => {
-        ocultarBranding();
-        let mensaje = encriptador(textoEntrada.value, 2);
-        textoEntrada.value = "";
-        textoSalida.value = mensaje;
+        if (textoEntrada.value !== "") {
+            ocultarBranding();
+            let mensaje = encriptador(textoEntrada.value, 2);
+            textoEntrada.value = "";
+            textoSalida.value = mensaje;
+        }
+        else {
+            alert('No puede estar vacio')
+        }
     }
 );
 

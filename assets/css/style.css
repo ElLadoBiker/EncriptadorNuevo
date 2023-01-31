@@ -71,6 +71,12 @@ main {
 }
 
 /* Advertencia e Icono */
+.advertencia {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .contenedores p {
     color: var(--colorSeis);
 }
@@ -191,7 +197,7 @@ footer .red-social {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     body {
         padding: 10px;
         height: 100%;
@@ -229,8 +235,5 @@ footer .red-social {
 
     .grid-item-2 #muneco {
         display: none;
-    }
-
-    footer {
     }
 }
