@@ -5,19 +5,19 @@
 // Scope global SE USA VAR
 
 // Variable global de encriptador
-const letrasNoEncriptadas = ["e", "i", "a", "o", "u"]
-const letrasEncriptadas = ["enter", "imes", "ai", "ober", "ufat"]
+const letrasNoEncriptadas = ["e", "i", "a", "o", "u"];
+const letrasEncriptadas = ["enter", "imes", "ai", "ober", "ufat"];
 
 // Es la misma variable
 // const matrizCodigo =[["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 
 
-/*
- * El encriptador es una función que permite encriptar y desencriptar  un determinado texto dado
- * Los parametros que reciben es un mensaje, y luego la forma. Donde "1" es encriptar y "2" es desencriptar
- * Ejemplo: encriptador("hola", 1) retorna hoberlai.
- * Ejemplo: encriptador("hoberlai", 2) retorna hola.
-*/
+
+//  El encriptador es una función que permite encriptar y desencriptar  un determinado texto dado
+//  Los parametros que reciben es un mensaje, y luego la forma. Donde "1" es encriptar y "2" es desencriptar
+//  Ejemplo: encriptador("hola", 1) retorna hoberlai.
+//  Ejemplo: encriptador("hoberlai", 2) retorna hola. 
+ 
 function encriptador(mensaje, forma) {
     // Se utiliza el toLowerCase para convertir el texto recibido en minusculas, para su encriptacion.
     mensaje = mensaje.toLowerCase();
@@ -36,7 +36,6 @@ function encriptador(mensaje, forma) {
     }
 
     // Si es 2, desencripta un mensaje
-
     else if (forma == 2) {
         // Scope local - let NO SE USA VAR
         for (let i = 0; i < letrasNoEncriptadas.length; i++) {
@@ -81,4 +80,3 @@ btnDesencriptar.addEventListener("click",
         textoEntrada.value = "";
         textoSalida.value = mensaje;
     }
-);
